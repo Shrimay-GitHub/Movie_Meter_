@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMeter - Discover & Rate Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Discover, rate, and track your favorite movies with MovieMeter's beautiful interface.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-section">
+            <img src="logo.svg?v=2024" alt="MovieMeter Logo" class="logo">
+            <h2>MovieMeter</h2>
+        </div>
+        <div class="nav-actions">
+            <span id="welcome-user" class="welcome-text"></span>
+            <button onclick="logout()" class="logout-btn">
+                <span>Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="loading-screen" class="loading-screen" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p>Loading your movies...</p>
+        </div>
+        
+        <div class="movie-controls">
+            <div class="search-container">
+                <label for="movie-search" class="visually-hidden">Search movies</label>
+                <input type="text" id="movie-search" placeholder="🔍 Search movies..." onkeyup="filterMovies()" aria-label="Search movies">
+            </div>
+            <div class="filter-container">
+                <label for="year-filter" class="visually-hidden">Filter by year</label>
+                <select id="year-filter" onchange="filterMovies()" aria-label="Filter movies by decade">
+                    <option value="">All Years</option>
+                    <option value="2020s">2020s</option>
+                    <option value="2010s">2010s</option>
+                    <option value="2000s">2000s</option>
+                    <option value="1990s">1990s</option>
+                    <option value="1980s">1980s</option>
+                    <option value="1970s">1970s</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="movies-container" class="fade-in"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

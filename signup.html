@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMeter - Join the Community</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="signup-wrapper">
+        <div class="signup-card">
+            <img src="logo.svg?v=2024" alt="MovieMeter Logo" class="logo-large">
+            <h2>Join MovieMeter</h2>
+            <p>Create your account and start rating movies!</p>
+            
+            <div class="input-group">
+                <input type="text" id="signup-username" placeholder="Username" required autocomplete="username">
+                <input type="email" id="signup-email" placeholder="Email Address" required autocomplete="email">
+                <input type="password" id="signup-password" placeholder="Password" required autocomplete="new-password">
+                <input type="date" id="signup-dob" placeholder="Date of Birth" required>
+                <input type="tel" id="signup-phone" placeholder="Phone Number" required autocomplete="tel">
+            </div>
+
+            <button onclick="signup()" id="signup-btn">
+                <span>Create Account</span>
+            </button>
+            
+            <div id="signup-error-msg" style="display: none;"></div>
+
+            <p class="auth-link">Already have an account? <a href="login.html">Sign in here</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

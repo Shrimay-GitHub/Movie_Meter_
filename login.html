@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMeter - Welcome Back</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <img src="logo.svg?v=2024" alt="MovieMeter Logo" class="logo-large">
+            <h2>Welcome Back!</h2>
+            <p>Sign in to continue your movie journey</p>
+
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required autocomplete="username">
+                <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+            </div>
+            
+            <button onclick="login()" id="login-btn">
+                <span>Sign In</span>
+            </button>
+            
+            <div id="error-msg" style="display: none;"></div>
+
+            <p class="auth-link">New to MovieMeter? <a href="signup.html">Create an account</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
