@@ -70,13 +70,20 @@ app.use(cors({
 
 Then redeploy by pushing to GitHub.
 
-### 5. Seed Database (One-time)
+### 5. Seed Database (After Successful Deployment)
 
-After first deployment, seed your database:
+After your app is deployed successfully:
 
-1. Go to your Vercel project dashboard
-2. Navigate to "Functions" tab
-3. Find the seed function or manually trigger database seeding
+1. **Visit the seeding endpoint**:
+   - Go to: `https://your-vercel-url.vercel.app/api/seed`
+   - This will populate your database with 30 movies
+   - You should see a success message
+
+2. **Alternative - Manual seeding**:
+   ```bash
+   # If you need to seed locally first
+   npm run seed
+   ```
 
 ## Project Structure for Vercel
 
